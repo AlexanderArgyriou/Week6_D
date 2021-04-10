@@ -10,6 +10,10 @@ public class CompanyIncome {
         this.value = 0.0f;
     }   // default constructor
 
+    /**
+     * this function does something magnificent
+     * @param float
+     */
     public CompanyIncome(float value) {
         if(value > 0.0f) {
             this.value = value;
