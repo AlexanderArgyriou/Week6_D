@@ -1,18 +1,32 @@
 package calculations;
 
-import constants.Constants;
+import Epochs.Epoch;
+import Epochs.SummerProfit;
+import Epochs.WinterProfit;
 
 public class Company {
-    private companyExpenses companyExpenses;
-    private companyIncome companyIncome;
+    // year
+    private Epoch[] seasons; // 2(1 year).
     private float companyProfit;
 
-    public Company(calculations.companyExpenses companyExpenses, calculations.companyIncome companyIncome) {
-        this.companyExpenses = companyExpenses;
-        this.companyIncome = companyIncome;
+    public Company() {
+        this.companyProfit = 0.0f;
     }
 
-    public Company() {
+    public Company(Epoch[] seasons) {
+        this.seasons = seasons;
+    }
+
+    public Company(int seasons) {
+        this.seasons = new Epoch[2 * seasons];
+    }
+
+    public Epoch[] getSeasons() {
+        return seasons;
+    }
+
+    public void setSeasons(Epoch[] seasons) {
+        this.seasons = seasons;
     }
 
     public float getCompanyProfit() {
@@ -23,33 +37,16 @@ public class Company {
         this.companyProfit = companyProfit;
     }
 
-    public calculations.companyExpenses getCompanyExpenses() {
-        return companyExpenses;
-    }
-
-    public void setCompanyExpenses(calculations.companyExpenses companyExpenses) {
-        this.companyExpenses = companyExpenses;
-    }
-
-    public calculations.companyIncome getCompanyIncome() {
-        return companyIncome;
-    }
-
-    public void setCompanyIncome(calculations.companyIncome companyIncome) {
-        this.companyIncome = companyIncome;
-    }
-
-    public void calculateProfit() {
-        // solve it
-        // some1 pls
-        // write this
-        read();
-        companyProfit = companyIncome.getValue() - companyExpenses.getValue() + (Constants.VAT * companyIncome.getValue());
-        System.out.println(this.companyProfit);
-    }
-
-    private void read() {
-        companyIncome.readCompanyIncome();
-        companyExpenses.readCompanyExpenses();
+    public float calculateCompanyProfit() {
+        for(Epoch epoch : seasons) {
+            if(epoch instanceof WinterProfit) {
+                ((WinterProfit) epoch).calculateWinterProfit();
+                companyProfit += ((WinterProfit) epoch).getWinterProfit();
+            } else {
+                ((SummerProfit) epoch).calculateSummerProfit();
+                companyProfit += ((SummerProfit) epoch).getSummerProfit();
+            }
+        }
+        return companyProfit;
     }
 }
