@@ -20,7 +20,6 @@ public class CompanyExpenses {
         return this.value;
     }
 
-
     public void setValue(float value) {
         if (value > 0.0f) {
             this.value = value;
