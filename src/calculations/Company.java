@@ -1,31 +1,31 @@
 package calculations;
 
-import Epochs.Epoch;
+import Epochs.Saisonal;
 import Epochs.SummerProfit;
 import Epochs.WinterProfit;
 
 public class Company {
     // year
-    private Epoch[] seasons; // 2(1 year).
+    private Saisonal[] seasons; // 2(1 year).
     private float companyProfit;
 
     public Company() {
         this.companyProfit = 0.0f;
     }
 
-    public Company(Epoch[] seasons) {
+    public Company(Saisonal[] seasons) {
         this.seasons = seasons;
     }
 
     public Company(int seasons) {
-        this.seasons = new Epoch[2 * seasons];
+        this.seasons = new Saisonal[2 * seasons];
     }
 
-    public Epoch[] getSeasons() {
+    public Saisonal[] getSeasons() {
         return seasons;
     }
 
-    public void setSeasons(Epoch[] seasons) {
+    public void setSeasons(Saisonal[] seasons) {
         this.seasons = seasons;
     }
 
@@ -38,13 +38,13 @@ public class Company {
     }
 
     public float calculateCompanyProfit() {
-        for(Epoch epoch : seasons) {
-            if(epoch instanceof WinterProfit) {
-                ((WinterProfit) epoch).calculateWinterProfit();
-                companyProfit += ((WinterProfit) epoch).getWinterProfit();
+        for(Saisonal saisonal : seasons) {
+            if(saisonal instanceof WinterProfit) {
+                ((WinterProfit) saisonal).calculateWinterProfit();
+                companyProfit += ((WinterProfit) saisonal).getWinterProfit();
             } else {
-                ((SummerProfit) epoch).calculateSummerProfit();
-                companyProfit += ((SummerProfit) epoch).getSummerProfit();
+                ((SummerProfit) saisonal).calculateSummerProfit();
+                companyProfit += ((SummerProfit) saisonal).getSummerProfit();
             }
         }
         return companyProfit;

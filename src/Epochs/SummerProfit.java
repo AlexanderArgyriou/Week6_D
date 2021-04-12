@@ -4,7 +4,7 @@ import calculations.CompanyExpenses;
 import calculations.CompanyIncome;
 import constants.Constants;
 
-public class SummerProfit implements Epoch {
+public class SummerProfit implements Saisonal {
     private CompanyIncome totalSummerIncome;
     private CompanyExpenses totalSummerExpenses;
     private float summerProfit;
