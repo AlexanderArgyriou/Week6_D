@@ -2,16 +2,22 @@ package calculations;
 
 import java.util.Scanner;
 
+/**
+ * Author Alexandros Argyriou
+ */
 public class CompanyIncome {
 
     private float value;
 
+    /**
+     * Default Constructor
+     */
     public CompanyIncome() {
         this.value = 0.0f;
     }   // default constructor
 
     /**
-     * this function does something magnificent
+     * Constructor
      * @param float
      */
     public CompanyIncome(float value) {
@@ -22,16 +28,27 @@ public class CompanyIncome {
         }
     } // constructor
 
+    /**
+     * getter
+     * @return float
+     */
     public float getValue() {
         return this.value;
     }   // get value
 
+    /**
+     * setter
+     * @param float
+     */
     public void setValue(float value) {
         if(value > 0.0f) {
             this.value = value;
         }
     }   // set value
 
+    /**
+     * main calculation function
+     */
     public void readCompanyIncome() {
         do {
             Scanner scanner = new Scanner(System.in);

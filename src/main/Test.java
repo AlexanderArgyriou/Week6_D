@@ -7,6 +7,10 @@ import Epochs.Saisonal;
 import calculations.CompanyExpenses;
 import calculations.CompanyIncome;
 
+/**
+ * Author Alexandros Argyriou
+ * Driver Program
+ */
 public class Test {
     public static void main(String[] args) {
         Saisonal[] epochsTest = new Saisonal[4]; // 2 seasons, 2 xronia
