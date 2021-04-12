@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"calculations","l":"Company"},{"p":"calculations","l":"CompanyExpenses"},{"p":"calculations","l":"CompanyIncome"},{"p":"constants","l":"Constants"},{"p":"Epochs","l":"Saisonal"},{"p":"Epochs","l":"SummerProfit"},{"p":"main","l":"Test"},{"p":"Epochs","l":"WinterProfit"}]

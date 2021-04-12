@@ -3,7 +3,7 @@ package calculations;
 import java.util.Scanner;
 
 /**
- * Author Thomas Antoniadis
+ * @author Thomas Antoniadis
  */
 public class CompanyExpenses {
 

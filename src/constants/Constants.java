@@ -1,7 +1,7 @@
 package constants;
 
 /**
- * Author Alexandros Argyriou
+ * @author Alexandros Argyriou
  * Constants class
  */
 public class Constants {

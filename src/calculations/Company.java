@@ -5,7 +5,7 @@ import Epochs.SummerProfit;
 import Epochs.WinterProfit;
 
 /**
- * Author Christodoulou Ifigenia
+ * @author Christodoulou Ifigenia
  */
 public class Company {
     // year

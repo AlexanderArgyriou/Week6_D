@@ -3,7 +3,7 @@ package calculations;
 import java.util.Scanner;
 
 /**
- * Author Alexandros Argyriou
+ * @author Alexandros Argyriou
  */
 public class CompanyIncome {
 

@@ -8,7 +8,7 @@ import calculations.CompanyExpenses;
 import calculations.CompanyIncome;
 
 /**
- * Author Alexandros Argyriou
+ * @author Alexandros Argyriou
  * Driver Program
  */
 public class Test {

@@ -5,7 +5,7 @@ import calculations.CompanyIncome;
 import constants.Constants;
 
 /**
- * Author Terpsichori Mitsi
+ * @author Terpsichori Mitsi
  */
 public class SummerProfit implements Saisonal {
     private CompanyIncome totalSummerIncome;
